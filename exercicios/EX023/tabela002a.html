@@ -13,6 +13,7 @@
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative;
         }
 
         td, th {
@@ -32,9 +33,28 @@
             color: white;
         }
 
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: gray;
+
+        }
+
+        tbody > tr:nth-child(even) {/* 2n */
+            background-color: lightblue;
+            text-decoration: underline;
+        }
+
+        tbody > tr:nth-child(odd) {/* 2n-1*/
+            background-color: lightgreen;
+            font-weight: bold;
+        }
+
         td.num {
             text-align: right;
         }
+
+
     </style>
 </head>
 <body>
@@ -56,7 +76,7 @@
         <thead>
             <tr>
                 <th scope="col">Estado</th>
-                <th scope="col" style="width: 50px;">População</th>
+                <th scope="col">População</th>
             </tr>
         </thead>
         <tbody>
